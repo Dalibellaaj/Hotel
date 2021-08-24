@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tchi – Hotel Booking</title>
+	<!-- configuration -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="author" content="Dali-habib-mariem" />
+    <meta name="description" content="Tchi —Une réservation d'hôtel moderne" />
+	<link rel="shortcut icon" href="assets/images/favicons/favicon.png" type="image/png">
+    <!-- appel css -->
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css"/>
+</head>
+<body>
+    <!-- Preloader loding page appel -->
+    <div class="preloader">
+	    <div class="preloader__wrap">
+		    <div class="preloader__progress"><span></span></div>
+		</div>
+	</div>
+    <!-- Header -->
+	<header class="header">
+	    <nav class="navbar navbar-white navbar-overlay">
+            <a class="logo-link" href="home.html">
+                <img class="logotype" src="assets/images/ui/logo.png" alt="Tchi">
+		    </a>
+		    <div class="navbar__menu">
+		        <button class="hamburger" type="button">
+				    <span></span>
+					<span></span>
+				</button>
+			    <ul class="nav">
+				    <li class="nav__item "><a class="nav__link" href="rooms.html"><span data-hover="Rooms">Chambres</span></a></li>
+				    <li class="nav__item"><a class="nav__link" href="gallery.html"><span data-hover="Gallery">Galerie</span></a></li>
+				    <li class="nav__item"><a class="nav__link" href="about.html"><span data-hover="About Us">A propos</span></a></li>
+				    <li class="nav__item"><a class="nav__link" href="404.html"><span data-hover="Event">Évènement</span></a></li>
+				    <li class="nav__item"><a class="nav__link" href="contact.html"><span data-hover="Contact Us">Contact </span></a></li>
+					<li class="nav__item"><a class="btn btn__medium" href="reservations.html"><i class="btn-icon-left icon-bookmark"></i>Reservations</a></li>
+			    </ul>
+	        </div>
+		    <div class="navbar__btn">
+		        <a class="btn btn__medium" href="reservations.html"><i class="btn-icon-left icon-bookmark"></i>Reservations</a>
+		    </div>	
+	    </nav>
+	</header>
+	<main class="main">
+		<section class="intro">
+		    <div class="intro__bg-wrap">
+		        <div class="overlay intro__bg js-image js-parallax" data-image="assets/images/image_header_01.jpg"></div>
+			</div>
+	        <div class="container intro__container">
+		        <div class="row h-100 align-items-center">
+			        <div class="col-12 col-md-12 col-xl-8">
+				        
+		                <h1 class="title title--display-1 js-lines">Se sentir cool comme ton endroit préféré.</h1>
+					    <button class="intro__btn-play js-lines" id="play">Aventure<span class="btn-play btn-play__popup"></span></button>
+				    </div>
+                </div>				
+		    </div>
+		    <a class="scroll-to" href="#about">
+				Défiler vers le bas<span class="scroll-to__line"></span></a>
+	    </section>
+		<!-- Reservasion sur l image  -->
+		<div class="bottom-panel booking-panel">
+		    <form class="bottom-panel__wrap d-flex">
+			    <div class="row bottom-panel__form-wrap">
+			        <div class="form-group col-date-to col-12 col-sm-6 col-md-4 slash">
+				        <label class="labelFeature" for="check-in">Check in</label>
+                        <input type="text" class="inputFeature input-arrow readonly js-datepicker" id="check-in" name="check-in" placeholder="Choisissez date" required="required" autocomplete="off">
+				    </div>
+				    <div class="form-group col-date-from col-12 col-sm-6 col-md-4 slash">
+				        <label class="labelFeature" for="check-out">Check out</label>
+                        <input type="text" class="inputFeature input-arrow readonly js-datepicker" id="check-out" name="check-out" placeholder="Choisissez date" required="required" autocomplete="off">
+				    </div>
+				    <div class="form-group col-12 col-md-4 dropdown">
+					    <div class="closeDropdown" id="dropdownPersonsAction" data-toggle="dropdown" data-display="static">
+				            <label class="labelFeature" for="person-total">Personne</label>
+                            <input type="text" class="inputFeature input-arrow readonly" id="person-total" name="person" placeholder="Details" required="required" autocomplete="off">
+						</div>
+						<div class="dropdown-menu dropdown-menu-lg-left dropdown-menu-right" id="dropdownPersons" aria-labelledby="dropdownPersonsAction">
+						    <div class="row">
+						        <div class="form-group col-6 col__left">
+							        <label class="label" for="person-adult">Adultes</label>
+						            <div class="js-quantity">
+									    <span class="qty-minus icon-minus"></span>
+									    <input type="number" class="inputText js-quantity-input" id="person-adult" name="person-adalt" value="0" min="1" max="8" readonly="readonly">
+										<span class="qty-plus icon-plus"></span>
+									</div>	
+							    </div>
+							    <div class="form-group col-6 col__right">
+							        <label class="label" for="person-kids">Enfants</label>
+									<div class="js-quantity">
+									    <span class="qty-minus icon-minus"></span>
+							            <input type="number" class="inputText js-quantity-input" id="person-kids" name="person-kids" value="0" min="0" max="8" readonly="readonly">
+										<span class="qty-plus icon-plus"></span>
+									</div>
+							    </div>
+							</div>
+							<div class="row row-footer">
+							    <div class="col-6 col__left">
+							        <button type="button" class="btn btn__small btn__second btn-reset-persons w-100">Annulez</button>
+								</div>
+							    <div class="col-6 col__right">
+							        <button type="button" class="btn btn__small btn-close-dropdown w-100">OK</button>
+								</div>
+							</div>	
+						</div>
+				    </div>
+				</div>
+		        <button type="submit" class="btn-booking"><span>Suivant</span>Reservez</button>
+			</form>
+		</div>	
+	    <!-- /Resevasion  -->
+	    <!-- Section A propos -->
+	    <section id="about" class="container section">
+	        <div class="row">
+		        <div class="col-12 col-md-12 col-lg-8">
+			        <span class="title title--overhead js-lines">A propos</span>
+			        <h1 class="title title--h1 js-lines">Commencez votre incroyable aventure.</h1>
+			    </div>
+				<div class="col-12 col-lg-6 text-left text-sm-justify">
+				    <p class="mr-0 mr-lg-4 paragraph js-scroll-show">Le climat subtropical humide, les hautes montagnes, la végétation exotique, les plages sans fin, les parcs nationaux, l'architecture historique, les sites d'attraction passionnants, les festivals d'art et l'environnement multiculturel animé font de Sotchi une destination de villégiature de premier plan.</p>
+				</div>
+				<div class="col-12 col-lg-6 text-left text-sm-justify">
+					<p class="ml-0 ml-lg-4 paragraph js-scroll-show"> Tchi a beaucoup à offrir à tous ceux qui aiment la nature, les sports, l'histoire, les loisirs sur la plage ensoleillée et les aventures actives. Il y a trop de choses à faire et trop de choses à voir à Sotchi pour que vous ne vous ennuyiez jamais.</p>
+				</div>
+				
+				<div class="col-12 col-lg-6">
+				    <figure class="about-image-wrap mr-0 mr-lg-4">
+				        <a class="about-link" href="about.html">Explorez plus <i class="icon-arrow-special"></i></a>
+				        <img class="cover about-image-portrait" src="assets/images/about_image_01.jpg" alt="about" />
+					</figure>	
+				</div>
+				<div class="col-12 col-lg-6">
+				    <figure class="about-image-wrap ml-0 ml-lg-4">
+					    <img class="cover about-image-landscape" src="assets/images/about_image_02.jpg" alt="about" />
+					</figure>
+				</div>
+		    </div>
+		</section>
+		
+		<!-- Section chamber -->
+		<section class="container section">	
+	        <div class="row align-items-end">
+		        <div class="col-12 col-md-12 col-lg-8">
+			        <span class="title title--overhead js-lines">Chambres</span>
+			        <h1 class="title title--h1 js-lines">Chambres / Suites.</h1>
+			    </div>
+				<div class="col-12 col-md-12 col-lg-4 text-lg-right d-none d-md-block">
+				    <a class="btn-link header-btn-more" href="rooms.html">Voir Plus</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-12 col-lg-8">
+				       <div class="itemRoom">
+					    <span class="badge">Populaire</span>
+					    <figure class="itemRoom__img-wrap">
+						    <a class="itemRoom__link" href="room_details.html">
+							    <img class="cover" src="assets/images/image_room_01.jpg" alt="Chambres" />
+							</a>
+						</figure>
+						<div class="itemRoom__details">
+						    <h4 class="title title--h4">Chambre Confort</h4>
+							<div class="itemRoom__price">$89<span>nuit</span></div>
+						</div>	
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+				        <div class="itemRoom">
+					    <figure class="itemRoom__img-wrap">
+						    <a class="itemRoom__link" href="room_details.html">
+							    <img class="cover" src="assets/images/image_room_02.jpg" alt="room" />
+							</a>
+						</figure>
+						<div class="itemRoom__details">
+						    <h4 class="title title--h4">Chambre Luxe</h4>
+							<div class="itemRoom__price">$256<span>nuit</span></div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+				    <div class="itemRoom">
+					    <figure class="itemRoom__img-wrap">
+						    <a class="itemRoom__link" href="room_details.html">
+							    <img class="cover" src="assets/images/image_room_03.jpg" alt="room" />
+							</a>
+						</figure>
+						<div class="itemRoom__details">
+						    <h4 class="title title--h4">Chambre Grand Delux</h4>
+							<div class="itemRoom__price">$99<span>nuit</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+				    <div class="itemRoom">
+					    <figure class="itemRoom__img-wrap">
+						    <a class="itemRoom__link" href="room_details.html">
+							    <img class="cover" src="assets/images/image_room_04.jpg" alt="room" />
+							</a>
+						</figure>
+						<div class="itemRoom__details">
+						    <h4 class="title title--h4">Chambre standard</h4>
+							<div class="itemRoom__price">$49<span>nuit</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4">
+				    <div class="itemRoom mb-0">
+					    <figure class="itemRoom__img-wrap">
+						    <a class="itemRoom__link" href="room_details.html">
+							    <img class="cover" src="assets/images/image_room_05.jpg" alt="room" />
+							</a>
+						</figure>
+						<div class="itemRoom__details">
+						    <h4 class="title title--h4">Appartement</h4>
+							<div class="itemRoom__price">$649<span>nuit</span></div>
+						</div>
+					</div>
+				</div>
+            </div>			
+	    </section>
+		<!-- Section Témoignages -->
+		<section class="section section-testimonials section-gray section-gray--cutoutTop">
+		    <div class="container">
+			    <div class="row">
+				    <div class="col-12">
+			            <span class="title title--overhead js-lines">Témoignages</span>
+			            <h1 class="title title--h1 js-lines">Quelques clients <br><span class="text-accent">dire de nous.</span></h1>
+			        </div>
+					<div class="col-12">
+					    <div class="swiper-container js-testimonials mb-5">
+						    <div class="swiper-wrapper">
+                                <div class="testimonials-item swiper-slide">
+								    <h4 class="title title--h4"> Meilleur hôtel!</h4>
+									<p class="testimonials-item__caption">—L'hôtel a tout ce dont vous avez besoin. Au rez-de-chaussée il y a un bar dans le hall, au deuxième étage il y a une zone avec une piscine intérieure et un sauna, au septième étage il y a un restaurant et un spa-salon. Les chambres sont nettoyées tous les jours.</p>
+								    <div class="author-wrap">
+									    <div class="author-picture"><img class="cover" src="assets/images/person.jpg" alt="Jacob Lane" /></div>
+										<div>
+										    <div class="author-name">Jacob Lane</div>
+										    <div class="author-country">USA</div>
+										</div>
+									</div>
+								</div>
+                                <div class="testimonials-item swiper-slide">
+								    <h4 class="title title--h4">Hôtel confortable.</h4>
+									<p class="testimonials-item__caption">— Eh bien, que puis-je dire, chaque année, jour et heure, cet endroit se transforme pour le mieux. Le personnel est complètement compétent et sympathique, tout autour est fleuri, agréable, nourrissant et rend les vacances lumineuses.</p>
+								    <div class="author-wrap">
+									    <div class="author-picture"><img class="cover" src="assets/images/person2.jpg" alt="Victoria Wilson" /></div>
+										<div>
+										    <div class="author-name">Victoria Wilson</div>
+										    <div class="author-country"> France</div>
+										</div>
+									</div>
+								</div>
+                                <div class="testimonials-item swiper-slide">
+								    <h4 class="title title--h4">Le moderne.</h4>
+									<p class="testimonials-item__caption">— Le moderne hôtel 5 * tchi Center est une solution idéale pour combiner affaires et loisirs. Un design élégant et un service exceptionnel satisferont les désirs de tout client. 150 chambres avec balcon (non fumeur), vue mer, restaurant branché.</p>
+								    <div class="author-wrap">
+									    <div class="author-picture"><img class="cover" src="assets/images/person3.jpg" alt="Max Edwards" /></div>
+										<div>
+										    <div class="author-name">Max Edwards</div>
+										    <div class="author-country">Germany</div>
+										</div>
+									</div>
+								</div>
+                                <div class="testimonials-item swiper-slide">
+								    <h4 class="title title--h4">Meilleur hôtel!</h4>
+									<p class="testimonials-item__caption">—L'hôtel a tout ce dont vous avez besoin. Au rez-de-chaussée il y a un bar dans le hall, au deuxième étage il y a une zone avec une piscine intérieure et un sauna, au septième étage il y a un restaurant et un spa-salon. Les chambres sont nettoyées tous les jours..</p>
+								    <div class="author-wrap">
+									    <div class="author-picture"><img class="cover" src="assets/images/person.jpg" alt="Jacob Lane" /></div>
+										<div>
+										    <div class="author-name">Jacob Lane</div>
+										    <div class="author-country">USA</div>
+										</div>
+									</div>
+								</div>
+							     <div class="testimonials-item swiper-slide">
+								    <h4 class="title title--h4">Comfortable hotel.</h4>
+									<p class="testimonials-item__caption">— Eh bien, que puis-je dire, chaque année, jour et heure, cet endroit se transforme pour le mieux. Le personnel est complètement compétent et sympathique, tout autour est fleuri, agréable, nourrissant et rend les vacances lumineuses..</p>
+								    <div class="author-wrap">
+									    <div class="author-picture"><img class="cover" src="assets/images/person2.jpg" alt="Victoria Wilson" /></div>
+										<div>
+										    <div class="author-name">Victoria Wilson</div>
+										    <div class="author-country">France</div>
+										</div>
+									</div>
+								</div>
+							     <div class="testimonials-item swiper-slide">
+								    <h4 class="title title--h4">The modern.</h4>
+									<p class="testimonials-item__caption">— Le moderne hôtel 5 * tchi Center est une solution idéale pour combiner affaires et loisirs. Un design élégant et un service exceptionnel satisferont les désirs de tout client. 150 chambres avec balcon (non fumeur), vue mer, restaurant branché.</p>
+								    <div class="author-wrap">
+									    <div class="author-picture"><img class="cover" src="assets/images/person3.jpg" alt="Max Edwards" /></div>
+										<div>
+										    <div class="author-name">Max Edwards</div>
+										    <div class="author-country"> Germany</div>
+										</div>
+									</div>
+								</div>
+                            </div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<!-- /Carousel -->
+					</div>
+				</div>
+			</div>
+        </section>
+		
+	    <!-- Section CTA -->
+	    <section class="container">
+	        <div class="row cta-box cta-negative js-scroll-show">
+			    <div class="col-12 col-lg-7">
+			        <h2 class="title title--h2">Faites place à l'aventure.</h2>
+				    <p class="paragraph">Réservez votre chambre dès maintenant et commencez votre incroyable aventure pleine de découvertes et d'expériences avec Tchi.</p>
+				</div>
+				<div class="col-12 col-lg-5 text-lg-right">
+				    <a href="reservations.html" class="btn btn__large btn--white">Reservations <i class="btn-icon-right icon-arrow-special"></i></a>
+				</div>
+			</div>
+	    </section>
+	</main>
+	<!-- /Content -->
+	
+	<!-- Footer -->
+	<footer class="footer">
+	    <div class="footer__left">
+			<ul class="footer__info">
+			    <li>© 2021 Tchi Hotel créer par Dali-Habib-Mariem </li>
+			    </ul>
+		</div>
+		<ul class="footer__social">
+		    <li><a href="#" class="social-link"><i class="icon-facebook-alt"></i></a></li>
+		    <li><a href="#" class="social-link"><i class="icon-twitter-alt"></i></a></li>
+		    <li><a href="#" class="social-link"><i class="icon-instagram"></i></a></li>
+		</ul>
+	</footer>
+
+    <!-- Lightbox hero video -->
+    <div class="lightbox-backdrop">
+	    <div class="close-popup icon-x"></div>
+        <div class="lightbox-content">
+            <div class="video-foreground">
+			    <div class="youtube-popup" data-yt-url="https://www.youtube.com/embed/HSsqzzuGTPo?autoplay=1&amp;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button Live Chat -->
+	<a href="reservations.html"><div class="btn-floating js-show-to-scroll"><i class="icon-bubble"></i></div></a>
+
+	<!-- Demo Menu -->
+	<div class="btnSlideNav slideOpen"></div>
+    <div class="btnSlideNav slideClose"></div>
+    <ul class="slideNav">
+	    <li class="slideNav__item rtl-mode"><h2 class="title title--3">TCHI HOTEL</h2>
+        <li class="slideNav__item"><a href="home.html">Acceuil</a></li>
+        <li class="slideNav__item"><a href="rooms.html">Chambres</a></li>
+        <li class="slideNav__item"><a href="about.html">A propos</a></li>		
+        <li class="slideNav__item"><a href="gallery.html"> Galerie</a></li>
+        <li class="slideNav__item"><a href="404.html">Évènement</a></li>
+		<li class="slideNav__item"><a href="contact.html">Contact</a></li>
+		<li class="slideNav__item"><a href="reservations.html">Reservations</a></li>
+	
+    </ul>
+	<div class="overlay-slideNav"></div>
+    <!-- Demo Menu -->	
+
+	<!-- JavaScripts -->
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="assets/js/plugins.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    
+	<script src="assets/demo/plugins-demo.js"></script>
+</body>
+</html>

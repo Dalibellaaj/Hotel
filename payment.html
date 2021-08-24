@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tchi – Hotel Booking</title>
+	<!-- configuration -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+    <meta name="author" content="Dali-habib-mariem" />
+    <meta name="description" content="Tchi —Une réservation d'hôtel moderne" />
+	<link rel="shortcut icon" href="assets/images/favicons/favicon.png" type="image/png">
+    <!-- appel css -->
+	<link rel="stylesheet" type="text/css" href="assets/styles/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css"/>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+	    <div class="preloader__wrap">
+		    <div class="preloader__progress"><span></span></div>
+		</div>
+	</div>
+    
+	<!-- Content -->
+	<main class="main reservation-page">
+        <div class="reservation-page__left">
+		    <div class="reservation-page__wrap">
+		        <h2 class="title title--h2 text-center">
+					Paiement</h2>
+			    <p class="paragraph text-center">Veuillez remplir ce formulaire pour payer par carte de crédit ou de débit.</p>
+			    <div class="card-wrapper"></div>
+				<form id="payment-form" class="row mt-2 mt-sm-4">
+			        <div class="col-12">
+				        <div class="form-group">
+				            <label class="label" for="numberCard">
+								 numéro Carte</label>
+                            <input type="text" class="inputText" id="numberCard" name="numberCard" placeholder="Enter number card" required="required" autocomplete="off">
+					    </div>
+				    </div>
+					<div class="col-12">
+				        <div class="form-group">
+				            <label class="label" for="nameCard">Nom Carte</label>
+							<input type="text" class="inputText" id="nameCard" name="nameCard" placeholder="Enter name card" required="required" autocomplete="off">
+					    </div>
+					</div>
+					<div class="col-12 col-sm-6">
+				        <div class="form-group">
+				            <label class="label" for="expiryCard">Date d'expiration</label>
+                            <input type="text" class="inputText" id="expiryCard" name="expiryCard" placeholder="Enter expiry card" required="required" autocomplete="off">
+					    </div>
+					</div>
+					<div class="col-12 col-sm-6">
+				        <div class="form-group">
+				            <label class="label" for="cvc">CVC</label>
+							<input type="text" class="inputText" id="cvc" name="cvc" placeholder="Enter cvc card" required="required" autocomplete="off">
+					    </div>
+					</div>
+					<div class="col-12 col-sm-6 mt-2 mt-sm-3 order-2 order-sm-1">
+				        <a href="home.html" class="btn btn__medium btn__second w-100">Annulez</a>
+				    </div>
+				    <div class="col-12 col-sm-6 mt-2 mt-sm-3 order-1 order-sm-2">
+				        <button type="submit" class="btn btn__medium w-100">Payer</button>
+				    </div>
+			    </form>
+			</div>
+		</div>
+		<div class="reservation-page__right js-image js-scale-down" data-image="assets/images/image_header_03.jpg"></div>
+	</main>
+	<!-- /Content -->
+
+	<!-- Demo Menu -->
+	<div class="btnSlideNav slideOpen"></div>
+    <div class="btnSlideNav slideClose"></div>
+    <ul class="slideNav">
+	    <li class="slideNav__item rtl-mode"><h2 class="title title--3">TCHI HOTEL</h2>
+        <li class="slideNav__item"><a href="home.html">Acceuil</a></li>
+        <li class="slideNav__item"><a href="rooms.html">Chambres</a></li>
+        <li class="slideNav__item"><a href="about.html">A propos</a></li>		
+        <li class="slideNav__item"><a href="gallery.html"> Galerie</a></li>
+        <li class="slideNav__item"><a href="404.html">Évènement</a></li>
+		<li class="slideNav__item"><a href="contact.html">Contact</a></li>
+		<li class="slideNav__item"><a href="reservations.html">Reservations</a></li>
+	
+    </ul>
+	<div class="overlay-slideNav"></div>
+    <!-- Demo Menu -->	
+
+	<!-- JavaScripts -->
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="assets/js/plugins.min.js"></script>
+	<script src="assets/js/jquery.creditCardValidator.js"></script>
+    <script src="assets/js/common.js"></script>
+
+    <script src="assets/demo/plugins-demo.js"></script>
+</body>
+
+</html>
